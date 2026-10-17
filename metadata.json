@@ -1,0 +1,6 @@
+{
+  "name": "Kannada Worksheet Translator & Study PDF Builder",
+  "description": "Transforms Kannada PDF worksheets into comprehensive study materials with word-by-word English translations, phonetic pronunciations, and structured PDF exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

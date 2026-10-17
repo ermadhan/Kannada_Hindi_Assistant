@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  .font-kannada {
+    font-family: 'Noto Sans Kannada', 'Tunga', 'Kedage', sans-serif;
+  }
+
+  .font-hindi {
+    font-family: 'Noto Sans Devanagari', 'Mangal', 'Nirmala UI', sans-serif;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 1.5cm;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 11pt;
+  }
+
+  /* Hide navigation, toolbars, buttons, and app frames during print */
+  .no-print {
+    display: none !important;
+  }
+
+  /* Make print container full width */
+  .printable-area {
+    display: block !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .avoid-break-inside {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
