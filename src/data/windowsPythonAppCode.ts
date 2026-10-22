@@ -5,7 +5,7 @@ export const windowsPythonScript = `"""
 Kannada Worksheet PDF Translator & Study Guide Builder - Windows Desktop App
 Language: Python 3.10+
 GUI: CustomTkinter / Tkinter
-AI Engine: Google GenAI SDK (gemini-2.5-flash / gemini-3.8-flash)
+AI Engine: Google GenAI SDK (gemini-3.8-flash)
 PDF Engine: PyMuPDF (fitz) + ReportLab with Noto Sans Kannada font
 =============================================================================
 """
@@ -394,7 +394,7 @@ class KannadaTranslatorApp:
         )
 
         response = client.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=[
                 types.Part.from_bytes(data=img_bytes, mime_type="image/jpeg"),
                 types.Part.from_text(text=prompt)
@@ -608,7 +608,7 @@ export const windowsHindiPythonScript = `"""
 Hindi Worksheet PDF Translator & Study Guide Builder - Windows Desktop App
 Language: Python 3.10+
 GUI: CustomTkinter / Tkinter
-AI Engine: Google GenAI SDK (gemini-2.5-flash / gemini-3.8-flash)
+AI Engine: Google GenAI SDK (gemini-3.8-flash)
 PDF Engine: PyMuPDF (fitz) + ReportLab with Noto Sans Devanagari font
 =============================================================================
 """
@@ -798,7 +798,7 @@ class HindiTranslatorApp:
                 for p in range(len(doc)):
                     pix = doc[p].get_pixmap(dpi=200)
                     resp = client.models.generate_content(
-                        model="gemini-2.5-flash",
+                        model="gemini-3.8-flash",
                         contents=[types.Part.from_bytes(data=pix.tobytes("jpeg"), mime_type="image/jpeg"), types.Part.from_text(text="Extract Hindi worksheet.")],
                         config=types.GenerateContentConfig(system_instruction=SYSTEM_INSTRUCTION, response_mime_type="application/json", response_schema=HINDI_SCHEMA)
                     )
